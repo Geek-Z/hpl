@@ -1,6 +1,6 @@
 %{
 #include <stdio.h>
-#include "mycalc.tab.h"
+#include "y.tab.h"
 int yywrap(void)
 {
     return 1;
@@ -20,10 +20,6 @@ int yywrap(void)
     return DOUBLE_LITERAL;
 }
 [ \t] ;
-. {
-    fprintf(stderr, "lexical error.\n");
-    exit(1);
-}
 %%
 
 

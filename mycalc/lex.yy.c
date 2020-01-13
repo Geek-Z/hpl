@@ -360,8 +360,8 @@ static void yy_fatal_error (yyconst char msg[]  );
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
 
-#define YY_NUM_RULES 9
-#define YY_END_OF_BUFFER 10
+#define YY_NUM_RULES 8
+#define YY_END_OF_BUFFER 9
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -371,7 +371,7 @@ struct yy_trans_info
 	};
 static yyconst flex_int16_t yy_accept[18] =
     {   0,
-        0,    0,   10,    8,    7,    5,    3,    1,    2,    4,
+        0,    0,    9,    8,    7,    5,    3,    1,    2,    4,
         6,    6,    0,    0,    6,    6,    0
     } ;
 
@@ -457,7 +457,7 @@ char *yytext;
 #line 1 "mycalc.l"
 #line 2 "mycalc.l"
 #include <stdio.h>
-#include "mycalc.tab.h"
+#include "y.tab.h"
 int yywrap(void)
 {
     return 1;
@@ -773,17 +773,9 @@ YY_RULE_SETUP
 case 8:
 YY_RULE_SETUP
 #line 23 "mycalc.l"
-{
-    fprintf(stderr, "lexical error.\n");
-    exit(1);
-}
-	YY_BREAK
-case 9:
-YY_RULE_SETUP
-#line 27 "mycalc.l"
 ECHO;
 	YY_BREAK
-#line 787 "lex.yy.c"
+#line 779 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1777,7 +1769,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 27 "mycalc.l"
+#line 23 "mycalc.l"
 
 
 

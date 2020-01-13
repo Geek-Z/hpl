@@ -20,6 +20,11 @@ line                                   /* 单行的规则*/
     {
         printf(">>%lf\n", $1);
     }
+    | error CR                         /* error 为yacc当中的特殊标记, 表示任何错误的匹配*/
+    {
+        yyclearin;                     /* 丢弃预读的记号*/
+        yyerrok;                       /* 通知yacc程序已经从错误状态恢复了*/
+    }
     ;
 expression                             /* 表达式的规则*/
     : term                             /* 和项*/
